@@ -327,8 +327,7 @@ export function LoginPage() {
                   }}
                 >
                   Lupa password?
-                </button>
-                <span>Demo: Admin@Admin.com / Admin123</span>
+                </button>               
               </div>
             </form>
           </TabsContent>
