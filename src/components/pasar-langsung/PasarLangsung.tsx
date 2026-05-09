@@ -350,7 +350,7 @@ export function PasarLangsung() {
           <Badge variant="outline">SDG 2: Zero Hunger</Badge>
           <span className="text-xs text-muted-foreground hidden sm:inline">|</span>
           <p className="text-xs text-muted-foreground">
-            156 produk aktif &middot; 89 petani terdaftar &middot; Rp 450jt+ transaksi bulanan
+            1 produk aktif &middot; 4 petani terdaftar &middot; Rp 450jt+ transaksi bulanan
           </p>
         </div>
       </motion.div>

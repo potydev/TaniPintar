@@ -119,7 +119,7 @@ export function Homepage({ onNavigate }: HomepageProps) {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Petani Aktif</p>
-                      <p className="text-lg font-bold">+247 minggu ini</p>
+                      <p className="text-lg font-bold">+6 minggu ini</p>
                     </div>
                   </div>
                 </motion.div>
