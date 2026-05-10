@@ -7,12 +7,15 @@ import { Badge } from '@/components/ui/badge'
 import { ArrowRight, TrendingUp, Users, Shield, Sprout, BarChart3, Zap, Globe, ChevronDown, GraduationCap } from 'lucide-react'
 import { mockCommodities } from '@/lib/constants'
 import type { PageId } from '@/lib/store'
+import { useAppStore } from '@/lib/store'
 
 interface HomepageProps {
   onNavigate: (page: PageId) => void
 }
 
 export function Homepage({ onNavigate }: HomepageProps) {
+  const setShowLoginModal = useAppStore((s) => s.setShowLoginModal)
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -52,7 +55,11 @@ export function Homepage({ onNavigate }: HomepageProps) {
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button size="lg" onClick={() => onNavigate('pasar-pintar')} className="gap-2 bg-primary hover:bg-primary/90">
+                <Button
+                  size="lg"
+                  onClick={() => setShowLoginModal(true)}
+                  className="gap-2 bg-primary hover:bg-primary/90"
+                >
                   Mulai Sekarang — Gratis
                   <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -335,8 +342,13 @@ export function Homepage({ onNavigate }: HomepageProps) {
             Gratis, tanpa biaya tersembunyi. Daftar sekarang dan mulai perjalanan Anda.
           </p>
           <div className="relative mt-8 flex flex-wrap justify-center gap-4">
-            <Button size="lg" variant="secondary" onClick={() => onNavigate('dashboard')} className="gap-2">
-              Daftar Gratis
+            <Button
+              size="lg"
+              variant="secondary"
+              onClick={() => setShowLoginModal(true)}
+              className="gap-2"
+            >
+              Daftar Sekarang
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
